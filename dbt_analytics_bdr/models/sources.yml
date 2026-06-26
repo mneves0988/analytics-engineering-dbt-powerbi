@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: supabase_public
+    description: "Tabelas brutas de producao armazenadas no schema public do Supabase"
+    schema: public
+    tables:
+      - name: contas_gaps
+        description: "Historico de desvios e gaps de carteira das contas de clientes"
+      - name: cyrius_leads_minerva_telegram
+        description: "Cadastro de leads capturados pelo atendimento do agente Minerva"

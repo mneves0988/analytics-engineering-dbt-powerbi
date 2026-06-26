@@ -1,0 +1,23 @@
+# Logs e compilações geradas pelo dbt
+logs/
+target/
+dbt_packages/
+dbt_modules/
+
+# Credenciais e variáveis de ambiente locais (Contém dados confidenciais)
+.env
+profiles.yml
+
+# Pasta do ambiente virtual Python
+venv/
+env/
+
+# Cache e compilações do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos temporários e do sistema operacional
+.DS_Store
+Thumbs.db

@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_clientes
+    description: "Tabela dimensional de clientes unificados da Minerva"
+    columns:
+      - name: lead_id
+        description: "Chave primaria da dimensao (WhatsApp do cliente)"
+        data_tests: # Atualizado para a nomenclatura recomendada dbt 1.8+
+          - unique
+          - not_null
+
+  - name: fact_gaps_carteira # Corrigido de fct_ para fact_ para corresponder ao seu arquivo
+    description: "Tabela de fatos de alocacao e gaps financeiros"
+    columns:
+      - name: conta_id
+        description: "ID unico da conta do cliente"
+        data_tests:
+          - not_null
+      - name: tipo_gap
+        description: "Classificacao do desvio de carteira (OVER ou UNDER)"
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['OVER', 'UNDER']
