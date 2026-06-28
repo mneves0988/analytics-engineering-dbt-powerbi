@@ -105,8 +105,14 @@ dbt test
 
 ## Camada de Visualização (Power BI)
 
-O relatório executivo conecta-se diretamente ao esquema analytics do Supabase para consumir as tabelas físicas prontas, organizadas sob a seguinte lógica de negócio:
+O relatório executivo conecta-se diretamente ao esquema `analytics` do Supabase para consumir as tabelas físicas prontas, organizadas sob a seguinte lógica de negócio:
 
-- Aba 1 (Operacional): Análise de volume de contatos capturados pelo atendimento automatizado da Minerva, histórico de atração de leads e distribuição de contatos.
+### Aba 1: Painel Operacional (Agente Minerva)
+Focado no monitoramento de volume de contatos capturados pelo atendimento automatizado da Minerva, histórico de atração de novos leads e distribuição de contatos por domínios cadastrais.
 
-- Aba 2 (Financeiro): Distribuição de desvios e gaps de alocação por classe de ativos, índice de aderência média das contas e cruzamento de gaps (OVER/UNDER) por faixa de custódia.# analytics-engineering-dbt-powerbi
+![Painel Operacional](dashboard/operacional.png)
+
+### Aba 2: Painel Financeiro (Gaps de Alocação)
+Focado na distribuição de desvios e gaps de alocação por classe de ativos, índice de aderência média das contas modelo e cruzamento de gaps (OVER/UNDER) por faixa de custódia patrimonial dos clientes.
+
+![Painel Financeiro](dashboard/financeiro.png)
